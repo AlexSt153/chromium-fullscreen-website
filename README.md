@@ -4,11 +4,13 @@
 
 /home/pi/.config/lxsession/LXDE-pi/autostart
 
-# Bildschirmschoner deaktivieren
+# disable screensaver 
 #@xscreensaver -no-splash  
 @xset s off
 @xset -dpms
 @xset s noblank
 
-# lädt Chromium im Vollbild bei einem Neustart
-@/home/pi/chromium-fullscreen-website/chromium_start.sh
+# ROOT CRONTAB
+# m h  dom mon dow   command
+00 8 * * Mon-Sat /home/pi/chromium-fullscreen-website/tv_on.sh
+00 17 * * Mon-Sat echo standby 0 | cec-client -s -d 1 &

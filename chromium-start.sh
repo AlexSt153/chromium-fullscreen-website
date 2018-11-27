@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#URL einlesen
-URL=$(<~/chromium-fullscreen-website/.website_url)
+# URL einlesen
+URL=$(</home/pi/chromium-fullscreen-website/.website_url)
 
-#Chromium Startverzoegerung
-sleep 15
-chromium-browser --disable-session-crashed-bubble --disable-infobars --kiosk $URL
+# Chromium Startverzoegerung
+sleep 5
+DISPLAY=:0 chromium-browser --disable-session-crashed-bubble --disable-infobars --kiosk $URL
