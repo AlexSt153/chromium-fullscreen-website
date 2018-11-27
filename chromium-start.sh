@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #URL einlesen
-URL=$(<.website_url)
+URL=$(<~/chromium-fullscreen-website/.website_url)
 
 #Chromium Startverzoegerung
 sleep 15
